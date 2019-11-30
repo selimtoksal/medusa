@@ -122,7 +122,7 @@ open class MultipleStackNavigator(
             navigatorListener?.onTabChanged(fragmentStackState.getSelectedTabIndex())
         } else {
             val currentFragmentTag = fragmentStackState.popItemFromSelectedTab().fragmentTag
-            fragmentManagerController.removeFragment(currentFragmentTag)
+            fragmentManagerController.disableFragment(currentFragmentTag)
         }
 
         showUpperFragment()
