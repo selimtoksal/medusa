@@ -85,6 +85,7 @@ class FragmentManagerController(private val fragmentManager: FragmentManager,
             if (hasSharedElement(fragmentData)) {
                 setSharedElementTransitionAnimation(fragmentData, disabledFragment)
                 currentTransaction?.replace(containerId, fragmentData.fragment, fragmentData.fragmentTag)
+
             } else {
                 setTransitionAnimation(fragmentData)
                 currentTransaction?.replace(containerId, fragmentData.fragment, fragmentData.fragmentTag)
